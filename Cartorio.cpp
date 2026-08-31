@@ -1,7 +1,7 @@
 #include <stdio.h> //biblioteca de comunição com o usuario
 #include <stdlib.h>//biblioteca de alocação de memória
 #include <locale.h>//biblioteca de localização
-#include <string.h>//biblioteca de manipulação de stringsf
+#include <string.h>//biblioteca de manipulação de strings
 
 int registro () //Definindo a função registro
 {
