@@ -120,6 +120,26 @@ int main()
 {
     int opcao=0; //Definindo as variaveis do menu
     int laco=1; //Definindo a variável laco como 1 para que o programa entre no loop
+    char senhadigitada[10] ="a"; //Definindo a variável senhadigitada como uma string de 10 caracteres
+    int comparacao; //Definindo a variável comparacao como um inteiro para que o programa possa comparar a senha digitada pelo usuário com a senha correta
+
+    printf("cartorio da EBAC\n"); //Inicio do programa
+    printf("Login de administração:\n"); //Informando ao usuário que ele está no login de administração
+    scanf("%s", senhadigitada); //armazenando a senha digitada pelo usuário na variável
+
+    comparacao = strcmp (senhadigitada, "admin"); //comparando a senha digitada pelo usuário com a senha correta
+
+    if (comparacao ==0) //verificando se a senha digitada pelo usuário é igual a senha correta
+    {
+        system("cls"); //limpando a tela do console
+        printf("Senha correta\n"); //informando ao usuário que a senha digitada está correta
+    }
+    else
+    {
+        printf("Senha incorreta\n"); //informando ao usuário que a senha digitada está incorreta
+        return 0; //retornando 0 para indicar que o programa foi encerrado
+    }
+
 
     for (laco=1; laco==1;) //Definindo o loop do menu, enquanto a variável laco for igual a 1, o programa continuará executando
     {
@@ -135,9 +155,12 @@ int main()
         printf("Opçao:");
 
         scanf("%d", &opcao); //armazenando a opção escolhida pelo usuário
-
+        
+        system("cls"); //limpando a tela do console
+        
         switch (opcao) //Definindo as opções do menu
         {   
+            
             case 1: //Caso o usuário escolha a opção 1, ele será direcionado para a função de registrar nome
                 registro(); //chamando a função registro
                 break; //fim do case 1
@@ -151,7 +174,7 @@ int main()
                 break; //fim do case 3
 
             case 4: //Caso o usuário escolha a opção 4, ele será direcionado para a função de sair do programa
-                printf("Sair\n");
+                printf("Saindo do programa...\n");
                 laco=0; //Definindo o valor da variável laco como 0 para que o programa saia do loop e encerre
                 break; //fim do case 4
 
